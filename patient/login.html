@@ -12,11 +12,13 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/login.css">
+
+    <script src="./js/login.js" defer></script>
 </head>
 
 <body>
-    <div class="container-fluid flex">
+    <div class="container-fluid flex" id="wrapper">
         <!-- header -->
         <div class="button">
             <img src="./images/Fig1. Platform login page.jpg" alt="" width="300px">
@@ -27,21 +29,23 @@
 
 
         <!-- content -->
-        <div class="form">
+        <div class="form" id="display">
             <img class="opacity img-fluid" src="./images/7768657_3763028.jpg" alt="">
             <div class="width"> 
                 <div class="background">
                 <a href="#" class="mb-3 link" style="font-size: 17px; font-weight: 600;"><span><i
-                            class="fas fa-solid fa-less-than" style="color: rgb(23, 200, 245)"></i></span>  Back</a>
+                            class="fa-solid fa-less-than" style="color: rgb(23, 200, 245)"></i></span>  Back</a>
                 <p class="d-flex justify-content-center mb-5 font">Login To Your Account</p>
-                <div class="mb-4">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
+                <div class="mb-4 input">
+                    <input type="text" class="form-control transparent" id="formGroupExampleInput" placeholder="Username">
+                    <i class="fa-regular fa-circle-user icon"></i>
                 </div>
-                <div class="mb-4">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Password">
+                <div class="mb-4 input">
+                    <input type="text" class="form-control transparent" id="formGroupExampleInput" placeholder="Password">
+                    <i class="fa-regular fa-eye icon"></i>
                 </div>
                 <button type="button" class="btn2 mb-3">Log In</button>
-                <p style="color: rgb(23, 200, 245); display: flex; justify-content: center;">Forgot Password?</p>
+                <a href="#" class="mb-3 pass" id="click" style="font-size: 17px; font-weight: 600;display:flex; justify-content: center;">Forgot Password?</a>
             </div>
             </div>
         </div>
