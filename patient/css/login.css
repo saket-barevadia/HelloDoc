@@ -103,6 +103,22 @@
     background: transparent;
 }
 
+#password:hover{
+cursor: pointer;
+}
+
+#password{
+    display: block;
+}
+
+#password2{
+    display: none;
+}
+
+#password2:hover{
+    cursor: pointer;
+}
+
 
 @media only screen and (max-width: 680px) {
     .button img{

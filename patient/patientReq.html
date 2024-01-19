@@ -12,11 +12,18 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
+
+        <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
     <link rel="stylesheet" href="./css/patientReq.css">
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div>
         <!-- header -->
         <div class="header">
             <img src="./images/Fig1. Platform login page.jpg" alt="" class="img">
@@ -32,6 +39,7 @@
                             style="color: rgb(23, 200, 245)"></i></span> <span class="size"
                         style="color: rgb(23, 200, 245);">Back</span></button>
             </div>
+            <div class="container box">
             <h4 class="mt-3 font">Patient Information</h4>
             <div class="form-floating mt-3">
                 <input type="text" class="form-control shadow" style="height: 90px;" id="floatingInputGroup2"
@@ -65,19 +73,15 @@
 
             <h4 class="mt-4 font">Patient Contact Information</h4>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 mt-3">
                     <div class="form-floating">
                         <input type="email" class="form-control shadow" id="floatingInputGroup2" placeholder="Username"
                             required>
                         <label for="floatingInputGroup2"><span class="input">Email</span></label>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="form-floating">
-                        <input type="text" class="form-control shadow" id="floatingInputGroup2" placeholder="Username"
-                            required>
-                        <label for="floatingInputGroup2"><span class="input">Email</span></label>
-                    </div>
+                <div class="col-md-6 mt-3">
+                        <input id="phone" class="form-control country shadow " placeholder="" aria-label="Contact" type="tel" name="phone">        
                 </div>
             </div>
 
@@ -132,6 +136,7 @@
                 <button type="button" class="btn6 mb-3">Cancel</button>
             </div>
         </div>
+        </div>
         <!-- content -->
 
 
@@ -141,6 +146,14 @@
                 <p class="para">Terms of Conditions &nbsp; | &nbsp; Privacy Policy</p>
             </div>
         </div>
+
+           <script>
+            const phoneInputField = document.querySelector("#phone");
+            const phoneInput = window.intlTelInput(phoneInputField, {
+              utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+            });
+          </script>
         <!-- footer -->
     </div>
 </body>
